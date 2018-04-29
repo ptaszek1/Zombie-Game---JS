@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.plansza {
+    height:800px;
+    width: 100%;
+    background: #aaa;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(52,179,247,1) 0%, rgba(215,229,245,1) 49%, rgba(32,245,12,1) 51%, rgba(98,150,2,1) 100%);
+    cursor: crosshair;
+}
+.score {
+    font-weight: 700;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.zombie {
+    cursor: crosshair;
+    width:200px;
+    height:312px;
+    background: url(../walkingdead.png);
+    position: absolute;
+    left:102%;
+    bottom:100px;
+    animation:  zombieAnim 0.5s 0s infinite steps(9),
+                zombieWalk 10s 0s 1 linear;
+}
+
+@keyframes zombieAnim {
+    100% {
+        background-position: -1800px 0;
+    }
+}
+@keyframes zombieWalk {
+    100% {
+        left: -300px;
+    }
+}
+
+
