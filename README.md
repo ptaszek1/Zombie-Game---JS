@@ -1,6 +1,6 @@
 # Zombie Game
 
-This is a simple game built to test a users memory. There's a deck of cards with different pictures. 
+This is a simple game built to kill that many zombies how many you can , just hit them and get best score !
 
 Live: https://ptaszek1.github.io/Zombie-Game-JS/
 
