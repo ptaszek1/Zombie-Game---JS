@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var plansza = document.querySelector('.plansza');
 
+    var score = 0;
+
     var time = setInterval(function() {
 
         var zombie = document.createElement('div');
@@ -43,13 +45,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         zombie.addEventListener('animationend', function(e) {
             if (e.animationName === 'zombieWalk') {
+                score -= 50;
                 this.remove();
+                document.querySelector('.score span').innerText = score;
             }
         });
 
     }, 1000);
-
-    var score = 0;
 
     plansza.addEventListener('click', function(e) {
         if (e.target.classList.contains('zombie')) {
@@ -57,8 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (e.target.live <= 0) {
                 score += 10;
                 e.target.remove();
-                document.querySelector('.score span').innerText = score;
             }
+            document.querySelector('.score span').innerText = score;
+
         }
     });
 
